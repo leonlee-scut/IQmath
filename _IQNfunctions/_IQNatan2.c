@@ -63,12 +63,7 @@ extern uint_fast32_t _UIQ31div(uint_fast32_t uiq31Input1, uint_fast32_t uiq31Inp
  *
  *     atan(y/x) = pi/2 - atan(x/y)
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNatan2)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
 {
     uint8_t ui8Status = 0;
     uint8_t ui8Index;
@@ -216,13 +211,8 @@ __STATIC_INLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqN
  * @return                IQN type result of 4-quadrant arctangent.
  */
 /* Calculate atan2 using MATHACL */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNatan2)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
 
-__STATIC_INLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
 {
     int_fast32_t res, res1, abs_max, temp;
     int_fast32_t iqNnormX, iqNnormY, iq31normX, iq31normY;

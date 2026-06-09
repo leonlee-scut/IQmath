@@ -23,11 +23,6 @@
  * @return                Returns 0 if there is no error, 1 if the width is too small to hold the integer
  *                        characters, and 2 if an illegal format was specified.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNtoa)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
 int_fast16_t __IQNtoa(char *string, const char *format, int_fast32_t iqNInput, int_fast16_t q_value)
 {
     char *pcBuf;                    // buffer pointer

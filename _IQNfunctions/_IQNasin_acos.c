@@ -62,12 +62,7 @@ extern int_fast32_t _IQ31sqrt(int_fast32_t iq31Input);
  * Acos is implemented using asin and identity (1).
  */
 
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNasin)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNasin(int_fast32_t iqNInput, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNasin(int_fast32_t iqNInput, const int8_t q_value)
 {
     uint8_t ui8Status = 0;
     uint_fast16_t index;

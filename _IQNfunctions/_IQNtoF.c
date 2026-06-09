@@ -17,12 +17,7 @@
  *
  * @return                Conversion of iqNInput to floating point.
  */
-#if defined(__TI_COMPILER_VERSION__)
-#pragma FUNC_ALWAYS_INLINE(__IQNtoF)
-#elif defined(__IAR_SYSTEMS_ICC__)
-#pragma inline = forced
-#endif
-__STATIC_INLINE float __IQNtoF(int_fast32_t iqNInput, int8_t q_value)
+__STATIC_FORCEINLINE float __IQNtoF(int_fast32_t iqNInput, int8_t q_value)
 {
     uint_fast16_t ui16Exp;
     uint_fast32_t uiq23Result;

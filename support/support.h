@@ -1,12 +1,10 @@
-#ifndef __SUPPORTH__
-#define __SUPPORTH__
+#ifndef __SUPPORT_H__
+#define __SUPPORT_H__
 
+#include "cmsis_compiler.h"
 #include <math.h>
 #include "RTS_support.h"
 
-#ifndef __STATIC_INLINE
-    #define __STATIC_INLINE static inline
-#endif
 
 /* Common value defines. */
 #define q15_ln2          0x58b9
@@ -36,4 +34,4 @@
 #define iq31_oneTenth    0x0ccccccd
 #define iq31_one         0x7fffffff
 
-#endif //__SUPPORTH__
+#endif //__SUPPORT_H__

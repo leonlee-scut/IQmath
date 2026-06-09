@@ -26,12 +26,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNmpyIQX)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNmpyIQX(int_fast32_t a, int n1, int_fast32_t b, int n2, int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNmpyIQX(int_fast32_t a, int n1, int_fast32_t b, int n2, int8_t q_value)
 {
     uint_fast16_t ui16IntState;
     uint_fast16_t ui16MPYState;

@@ -73,4 +73,4 @@ extern const uint_fast16_t _IQ14sqrt_lookup[96];
  */
 extern const uint_fast32_t _IQNshift32[32];
 
-#endif
+#endif // _IQNTABLES_H_

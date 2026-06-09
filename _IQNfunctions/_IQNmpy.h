@@ -20,12 +20,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNmpy)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     int_fast64_t iqNResult;
 
@@ -44,12 +39,7 @@ __STATIC_INLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNIn
  *
  * @return                IQN type result of the multiplication.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNmpy)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     /* write control */
     MATHACL->CTL = 6 | (q_value<<8) | (1 << 5);

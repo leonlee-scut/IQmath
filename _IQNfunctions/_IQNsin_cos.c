@@ -75,12 +75,7 @@
  * Using a lookup table with a 64 bit index (52 indexes since the input range is
  * only 0 - 0.785398) and second order Taylor series gives 28 bits of accuracy.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNcalcSin)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNcalcSin(uint_fast32_t uiq31Input)
+__STATIC_FORCEINLINE int_fast32_t __IQNcalcSin(uint_fast32_t uiq31Input)
 {
 	uint_fast16_t index;
     int_fast32_t iq31X;
@@ -131,12 +126,7 @@ __STATIC_INLINE int_fast32_t __IQNcalcSin(uint_fast32_t uiq31Input)
  *
  * @return                UIQ31 type result of cosine.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNcalcCos)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNcalcCos(uint_fast32_t uiq31Input)
+__STATIC_FORCEINLINE int_fast32_t __IQNcalcCos(uint_fast32_t uiq31Input)
 {
 	uint_fast16_t index;
     int_fast32_t iq31X;
@@ -191,12 +181,7 @@ __STATIC_INLINE int_fast32_t __IQNcalcCos(uint_fast32_t uiq31Input)
  *
  * @return                IQN type result of sin or cosine operation.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNsin_cos)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
+__STATIC_FORCEINLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
                                    const int8_t type, const int8_t format)
 {
     uint8_t ui8Sign = 0;
@@ -336,12 +321,7 @@ __STATIC_INLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_
  *
  * @return                IQN type result of sin or cosine operation.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNsin_cos)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
+__STATIC_FORCEINLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
                                    const int8_t type, const int8_t format)
 {
     int_fast32_t res, res1, resMult, resDiv;

@@ -20,12 +20,7 @@
  *
  * @return                  IQN type result of exponential.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNlog)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNlog(int_fast32_t iqNInput, const int_fast32_t iqNMin, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNlog(int_fast32_t iqNInput, const int_fast32_t iqNMin, const int8_t q_value)
 {
     uint8_t ui8Counter;
     int_fast16_t i16Exp;

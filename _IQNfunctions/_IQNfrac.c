@@ -17,12 +17,7 @@
  *
  * @return                IQN type fractional portion of input.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNfrac)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNfrac(int_fast32_t iqNInput, int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNfrac(int_fast32_t iqNInput, int8_t q_value)
 {
     int_fast32_t iqNInteger;
 

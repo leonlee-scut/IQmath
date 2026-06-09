@@ -31,12 +31,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNdiv)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const uint8_t type, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const uint8_t type, const int8_t q_value)
 {
     uint8_t ui8Index, ui8Sign = 0;
     uint_fast32_t ui32Temp;
@@ -182,12 +177,7 @@ __STATIC_INLINE int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t iqNIn
  *
  * @return                IQN type result of the multiplication.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNdiv_MathACL)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNdiv_MathACL(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNdiv_MathACL(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     /* write control */
     MATHACL->CTL = 4 | (q_value<<8) | (1 << 5);

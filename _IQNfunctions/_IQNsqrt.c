@@ -60,12 +60,7 @@
  *
  *     root(x) = x * 1/root(x)
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNsqrt)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t iqNInputY, const int8_t q_value, const int8_t type)
+__STATIC_FORCEINLINE int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t iqNInputY, const int8_t q_value, const int8_t type)
 {
     uint8_t ui8Index;
     uint8_t ui8Loops;
@@ -294,12 +289,7 @@ __STATIC_INLINE int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t iqNI
  *
  * @return                  IQN type result of the square root operation.
  */
-#if defined (__TI_COMPILER_VERSION__)
-    #pragma FUNC_ALWAYS_INLINE(__IQNsqrt_MathACL)
-#elif defined(__IAR_SYSTEMS_ICC__)
-    #pragma inline=forced
-#endif
-__STATIC_INLINE int_fast32_t __IQNsqrt_MathACL(int_fast32_t iqNInputX, const int8_t q_value)
+__STATIC_FORCEINLINE int_fast32_t __IQNsqrt_MathACL(int_fast32_t iqNInputX, const int8_t q_value)
 {
     /* check sign of input */
     if (iqNInputX <= 0) {
