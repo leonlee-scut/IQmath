@@ -26,7 +26,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNmpyIQX(int_fast32_t a, int n1, int_fast32_t b, int n2, int8_t q_value)
+__IQ_FXN int_fast32_t __IQNmpyIQX(int_fast32_t a, int n1, int_fast32_t b, int n2, int8_t q_value)
 {
     uint_fast16_t ui16IntState;
     uint_fast16_t ui16MPYState;

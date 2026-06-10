@@ -75,7 +75,7 @@
  * Using a lookup table with a 64 bit index (52 indexes since the input range is
  * only 0 - 0.785398) and second order Taylor series gives 28 bits of accuracy.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNcalcSin(uint_fast32_t uiq31Input)
+__IQ_FXN int_fast32_t __IQNcalcSin(uint_fast32_t uiq31Input)
 {
 	uint_fast16_t index;
     int_fast32_t iq31X;
@@ -126,7 +126,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNcalcSin(uint_fast32_t uiq31Input)
  *
  * @return                UIQ31 type result of cosine.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNcalcCos(uint_fast32_t uiq31Input)
+__IQ_FXN int_fast32_t __IQNcalcCos(uint_fast32_t uiq31Input)
 {
 	uint_fast16_t index;
     int_fast32_t iq31X;
@@ -181,7 +181,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNcalcCos(uint_fast32_t uiq31Input)
  *
  * @return                IQN type result of sin or cosine operation.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
+__IQ_FXN int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
                                    const int8_t type, const int8_t format)
 {
     uint8_t ui8Sign = 0;
@@ -321,7 +321,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8
  *
  * @return                IQN type result of sin or cosine operation.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
+__IQ_FXN int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_value,
                                    const int8_t type, const int8_t format)
 {
     int_fast32_t res, res1, resMult, resDiv;

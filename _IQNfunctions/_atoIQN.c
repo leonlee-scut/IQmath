@@ -17,7 +17,7 @@
  *
  * @return                Conversion of string to IQN type.
  */
-__STATIC_FORCEINLINE int_fast32_t __atoIQN(const char *string, int_fast32_t q_value)
+__IQ_FXN int_fast32_t __atoIQN(const char *string, int_fast32_t q_value)
 {
     uint8_t sgn;
     uint_fast16_t ui16IntState;

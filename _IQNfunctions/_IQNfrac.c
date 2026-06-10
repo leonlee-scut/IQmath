@@ -17,7 +17,7 @@
  *
  * @return                IQN type fractional portion of input.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNfrac(int_fast32_t iqNInput, int8_t q_value)
+__IQ_FXN int_fast32_t __IQNfrac(int_fast32_t iqNInput, int8_t q_value)
 {
     int_fast32_t iqNInteger;
 

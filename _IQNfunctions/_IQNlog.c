@@ -20,7 +20,7 @@
  *
  * @return                  IQN type result of exponential.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNlog(int_fast32_t iqNInput, const int_fast32_t iqNMin, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNlog(int_fast32_t iqNInput, const int_fast32_t iqNMin, const int8_t q_value)
 {
     uint8_t ui8Counter;
     int_fast16_t i16Exp;

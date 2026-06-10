@@ -60,7 +60,7 @@
  *
  *     root(x) = x * 1/root(x)
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t iqNInputY, const int8_t q_value, const int8_t type)
+__IQ_FXN int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t iqNInputY, const int8_t q_value, const int8_t type)
 {
     uint8_t ui8Index;
     uint8_t ui8Loops;
@@ -289,7 +289,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t
  *
  * @return                  IQN type result of the square root operation.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNsqrt_MathACL(int_fast32_t iqNInputX, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNsqrt_MathACL(int_fast32_t iqNInputX, const int8_t q_value)
 {
     /* check sign of input */
     if (iqNInputX <= 0) {

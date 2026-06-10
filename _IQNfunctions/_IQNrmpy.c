@@ -21,7 +21,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNrmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNrmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     int_fast64_t iqNResult;
 

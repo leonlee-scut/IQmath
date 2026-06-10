@@ -63,7 +63,7 @@ extern uint_fast32_t _UIQ31div(uint_fast32_t uiq31Input1, uint_fast32_t uiq31Inp
  *
  *     atan(y/x) = pi/2 - atan(x/y)
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
 {
     uint8_t ui8Status = 0;
     uint8_t ui8Index;
@@ -212,7 +212,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_
  */
 /* Calculate atan2 using MATHACL */
 
-__STATIC_FORCEINLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqNInputX, const uint8_t type, const int8_t q_value)
 {
     int_fast32_t res, res1, abs_max, temp;
     int_fast32_t iqNnormX, iqNnormY, iq31normX, iq31normY;

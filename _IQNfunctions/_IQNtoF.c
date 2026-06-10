@@ -17,7 +17,7 @@
  *
  * @return                Conversion of iqNInput to floating point.
  */
-__STATIC_FORCEINLINE float __IQNtoF(int_fast32_t iqNInput, int8_t q_value)
+__IQ_FXN float __IQNtoF(int_fast32_t iqNInput, int8_t q_value)
 {
     uint_fast16_t ui16Exp;
     uint_fast32_t uiq23Result;

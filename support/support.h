@@ -1,10 +1,13 @@
 #ifndef __SUPPORT_H__
 #define __SUPPORT_H__
 
-#include "cmsis_compiler.h"
 #include <math.h>
+#include "cmsis_compiler.h"
 #include "RTS_support.h"
 
+#ifndef __IQ_FXN
+#define __IQ_FXN        __STATIC_FORCEINLINE
+#endif /* __IQ_FXN */
 
 /* Common value defines. */
 #define q15_ln2          0x58b9
@@ -34,4 +37,4 @@
 #define iq31_oneTenth    0x0ccccccd
 #define iq31_one         0x7fffffff
 
-#endif //__SUPPORT_H__
+#endif /* __SUPPORT_H__ */

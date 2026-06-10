@@ -20,7 +20,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     int_fast64_t iqNResult;
 
@@ -39,7 +39,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t 
  *
  * @return                IQN type result of the multiplication.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNmpy(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     /* write control */
     MATHACL->CTL = 6 | (q_value<<8) | (1 << 5);

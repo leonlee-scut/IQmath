@@ -31,7 +31,7 @@
  *
  * @return                IQN type result of the multiplication.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const uint8_t type, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const uint8_t type, const int8_t q_value)
 {
     uint8_t ui8Index, ui8Sign = 0;
     uint_fast32_t ui32Temp;
@@ -177,7 +177,7 @@ __STATIC_FORCEINLINE int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t 
  *
  * @return                IQN type result of the multiplication.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNdiv_MathACL(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNdiv_MathACL(int_fast32_t iqNInput1, int_fast32_t iqNInput2, const int8_t q_value)
 {
     /* write control */
     MATHACL->CTL = 4 | (q_value<<8) | (1 << 5);

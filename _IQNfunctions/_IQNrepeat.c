@@ -13,7 +13,7 @@
  *
  * @return                IQN type result of operation.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQopRepeat(int_fast32_t iqNInput1, int_fast32_t iqNInput2)
+__IQ_FXN int_fast32_t __IQopRepeat(int_fast32_t iqNInput1, int_fast32_t iqNInput2)
 {
     /* write operands to HWA */
     MATHACL->OP2 = iqNInput2;

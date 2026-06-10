@@ -24,7 +24,7 @@
  *
  * @return                  IQN type result of exponential.
  */
-__STATIC_FORCEINLINE int_fast32_t __IQNexp(int_fast32_t iqNInput, const uint_fast32_t *iqNLookupTable, uint8_t ui8IntegerOffset, const int_fast32_t iqN_MIN, const int_fast32_t iqN_MAX, const int8_t q_value)
+__IQ_FXN int_fast32_t __IQNexp(int_fast32_t iqNInput, const uint_fast32_t *iqNLookupTable, uint8_t ui8IntegerOffset, const int_fast32_t iqN_MIN, const int_fast32_t iqN_MAX, const int8_t q_value)
 {
     uint8_t ui8Count;
     int_fast16_t i16Integer;
