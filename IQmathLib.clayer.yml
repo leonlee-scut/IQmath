@@ -1,0 +1,29 @@
+layer:
+  description: Fixed point math library
+  add-path:
+    - include
+
+  groups:
+    - group: IQmath library
+      files:
+        - file: _IQNfunctions/_atoIQN.c
+        - file: _IQNfunctions/_IQNasin_acos.c
+        - file: _IQNfunctions/_IQNatan2.c
+        - file: _IQNfunctions/_IQNdiv.c
+        - file: _IQNfunctions/_IQNdiv.h
+        - file: _IQNfunctions/_IQNexp.c
+        - file: _IQNfunctions/_IQNfrac.c
+        - file: _IQNfunctions/_IQNlog.c
+        - file: _IQNfunctions/_IQNmpy.c
+        - file: _IQNfunctions/_IQNmpy.h
+        - file: _IQNfunctions/_IQNmpyIQX.c
+        - file: _IQNfunctions/_IQNrepeat.c
+        - file: _IQNfunctions/_IQNrmpy.c
+        - file: _IQNfunctions/_IQNrsmpy.c
+        - file: _IQNfunctions/_IQNsin_cos.c
+        - file: _IQNfunctions/_IQNsqrt.c
+        - file: _IQNfunctions/_IQNtables.c
+        - file: _IQNfunctions/_IQNtables.h
+        - file: _IQNfunctions/_IQNtoa.c
+        - file: _IQNfunctions/_IQNtoF.c
+        - file: _IQNfunctions/_IQNversion.c
