@@ -5,6 +5,7 @@ layer:
 
   groups:
     - group: IQmath library
+      optimize: speed
       files:
         - file: _IQNfunctions/_atoIQN.c
         - file: _IQNfunctions/_IQNasin_acos.c
