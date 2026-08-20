@@ -28,3 +28,4 @@ layer:
         - file: _IQNfunctions/_IQNtoa.c
         - file: _IQNfunctions/_IQNtoF.c
         - file: _IQNfunctions/_IQNversion.c
+        - file: _IQNfunctions/_IQNintzr.c

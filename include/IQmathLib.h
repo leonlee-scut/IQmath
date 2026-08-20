@@ -38,6 +38,8 @@ extern "C"
 #include <stdlib.h>
 #include <stdint.h>
 
+#include "cmsis_compiler.h"
+
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 //*****************************************************************************
 //
@@ -5135,6 +5137,223 @@ extern _iq1 _IQ1frac(_iq1 A);
 #if GLOBAL_IQ == 1
 #define _IQfrac(A)              _IQ1frac(A)
 #endif
+
+//*****************************************************************************
+//
+// Returns the integer portion of an IQ number using mathematical
+// truncation toward zero. 
+//
+//****************************************************************************
+#define _IQ30intz(A)            ((A) / (1<<30))
+#define _IQ29intz(A)            ((A) / (1<<29))
+#define _IQ28intz(A)            ((A) / (1<<28))
+#define _IQ27intz(A)            ((A) / (1<<27))
+#define _IQ26intz(A)            ((A) / (1<<26))
+#define _IQ25intz(A)            ((A) / (1<<25))
+#define _IQ24intz(A)            ((A) / (1<<24))
+#define _IQ23intz(A)            ((A) / (1<<23))
+#define _IQ22intz(A)            ((A) / (1<<22))
+#define _IQ21intz(A)            ((A) / (1<<21))
+#define _IQ20intz(A)            ((A) / (1<<20))
+#define _IQ19intz(A)            ((A) / (1<<19))
+#define _IQ18intz(A)            ((A) / (1<<18))
+#define _IQ17intz(A)            ((A) / (1<<17))
+#define _IQ16intz(A)            ((A) / (1<<16))
+#define _IQ15intz(A)            ((A) / (1<<15))
+#define _IQ14intz(A)            ((A) / (1<<14))
+#define _IQ13intz(A)            ((A) / (1<<13))
+#define _IQ12intz(A)            ((A) / (1<<12))
+#define _IQ11intz(A)            ((A) / (1<<11))
+#define _IQ10intz(A)            ((A) / (1<<10))
+#define _IQ9intz(A)             ((A) / (1<<9))
+#define _IQ8intz(A)             ((A) / (1<<8))
+#define _IQ7intz(A)             ((A) / (1<<7))
+#define _IQ6intz(A)             ((A) / (1<<6))
+#define _IQ5intz(A)             ((A) / (1<<5))
+#define _IQ4intz(A)             ((A) / (1<<4))
+#define _IQ3intz(A)             ((A) / (1<<3))
+#define _IQ2intz(A)             ((A) / (1<<2))
+#define _IQ1intz(A)             ((A) / (1<<1))
+
+#define _IQintz(A)              ((A) / (1<<GLOBAL_IQ))
+
+//*****************************************************************************
+//
+// Returns the integer portion of an IQ number using mathematical
+// truncation toward zero with rounding.
+//
+//****************************************************************************
+extern int32_t _IQ30intzr(_iq30 A);
+extern int32_t _IQ29intzr(_iq29 A);
+extern int32_t _IQ28intzr(_iq28 A);
+extern int32_t _IQ27intzr(_iq27 A);
+extern int32_t _IQ26intzr(_iq26 A);
+extern int32_t _IQ25intzr(_iq25 A);
+extern int32_t _IQ24intzr(_iq24 A);
+extern int32_t _IQ23intzr(_iq23 A);
+extern int32_t _IQ22intzr(_iq22 A);
+extern int32_t _IQ21intzr(_iq21 A);
+extern int32_t _IQ20intzr(_iq20 A);
+extern int32_t _IQ19intzr(_iq19 A);
+extern int32_t _IQ18intzr(_iq18 A);
+extern int32_t _IQ17intzr(_iq17 A);
+extern int32_t _IQ16intzr(_iq16 A);
+extern int32_t _IQ15intzr(_iq15 A);
+extern int32_t _IQ14intzr(_iq14 A);
+extern int32_t _IQ13intzr(_iq13 A);
+extern int32_t _IQ12intzr(_iq12 A);
+extern int32_t _IQ11intzr(_iq11 A);
+extern int32_t _IQ10intzr(_iq10 A);
+extern int32_t _IQ9intzr(_iq9 A);
+extern int32_t _IQ8intzr(_iq8 A);
+extern int32_t _IQ7intzr(_iq7 A);
+extern int32_t _IQ6intzr(_iq6 A);
+extern int32_t _IQ5intzr(_iq5 A);
+extern int32_t _IQ4intzr(_iq4 A);
+extern int32_t _IQ3intzr(_iq3 A);
+extern int32_t _IQ2intzr(_iq2 A);
+extern int32_t _IQ1intzr(_iq1 A);
+
+#if GLOBAL_IQ == 30
+#define _IQintzr(A)             _IQ30intzr(A)
+#endif
+#if GLOBAL_IQ == 29
+#define _IQintzr(A)             _IQ29intzr(A)
+#endif
+#if GLOBAL_IQ == 28
+#define _IQintzr(A)             _IQ28intzr(A)
+#endif
+#if GLOBAL_IQ == 27
+#define _IQintzr(A)             _IQ27intzr(A)
+#endif
+#if GLOBAL_IQ == 26
+#define _IQintzr(A)             _IQ26intzr(A)
+#endif
+#if GLOBAL_IQ == 25
+#define _IQintzr(A)             _IQ25intzr(A)
+#endif
+#if GLOBAL_IQ == 24
+#define _IQintzr(A)             _IQ24intzr(A)
+#endif
+#if GLOBAL_IQ == 23
+#define _IQintzr(A)             _IQ23intzr(A)
+#endif
+#if GLOBAL_IQ == 22
+#define _IQintzr(A)             _IQ22intzr(A)
+#endif
+#if GLOBAL_IQ == 21
+#define _IQintzr(A)             _IQ21intzr(A)
+#endif
+#if GLOBAL_IQ == 20
+#define _IQintzr(A)             _IQ20intzr(A)
+#endif
+#if GLOBAL_IQ == 19
+#define _IQintzr(A)             _IQ19intzr(A)
+#endif
+#if GLOBAL_IQ == 18
+#define _IQintzr(A)             _IQ18intzr(A)
+#endif
+#if GLOBAL_IQ == 17
+#define _IQintzr(A)             _IQ17intzr(A)
+#endif
+#if GLOBAL_IQ == 16
+#define _IQintzr(A)             _IQ16intzr(A)
+#endif
+#if GLOBAL_IQ == 15
+#define _IQintzr(A)             _IQ15intzr(A)
+#endif
+#if GLOBAL_IQ == 14
+#define _IQintzr(A)             _IQ14intzr(A)
+#endif
+#if GLOBAL_IQ == 13
+#define _IQintzr(A)             _IQ13intzr(A)
+#endif
+#if GLOBAL_IQ == 12
+#define _IQintzr(A)             _IQ12intzr(A)
+#endif
+#if GLOBAL_IQ == 11
+#define _IQintzr(A)             _IQ11intzr(A)
+#endif
+#if GLOBAL_IQ == 10
+#define _IQintzr(A)             _IQ10intzr(A)
+#endif
+#if GLOBAL_IQ == 9
+#define _IQintzr(A)             _IQ9intzr(A)
+#endif
+#if GLOBAL_IQ == 8
+#define _IQintzr(A)             _IQ8intzr(A)
+#endif
+#if GLOBAL_IQ == 7
+#define _IQintzr(A)             _IQ7intzr(A)
+#endif
+#if GLOBAL_IQ == 6
+#define _IQintzr(A)             _IQ6intzr(A)
+#endif
+#if GLOBAL_IQ == 5
+#define _IQintzr(A)             _IQ5intzr(A)
+#endif
+#if GLOBAL_IQ == 4
+#define _IQintzr(A)             _IQ4intzr(A)
+#endif
+#if GLOBAL_IQ == 3
+#define _IQintzr(A)              _IQ3intzr(A)
+#endif
+#if GLOBAL_IQ == 2
+#define _IQintzr(A)             _IQ2intzr(A)
+#endif
+#if GLOBAL_IQ == 1
+#define _IQintzr(A)             _IQ1intzr(A)
+#endif
+
+//*****************************************************************************
+//
+// Returns the fractional portion of an IQ number using mathematical
+// truncation toward zero.
+//
+//****************************************************************************
+__STATIC_FORCEINLINE int32_t __IQfracz(int32_t A, int q)
+{
+    int32_t scale = (int32_t)1 << q;
+
+    return A - (A / scale) * scale;
+}
+
+
+
+
+#define _IQ30fracz(A)           __IQfracz((int32_t)(A), 30)
+#define _IQ29fracz(A)           __IQfracz((int32_t)(A), 29)
+#define _IQ28fracz(A)           __IQfracz((int32_t)(A), 28)
+#define _IQ27fracz(A)           __IQfracz((int32_t)(A), 27)
+#define _IQ26fracz(A)           __IQfracz((int32_t)(A), 26)
+#define _IQ25fracz(A)           __IQfracz((int32_t)(A), 25)
+#define _IQ24fracz(A)           __IQfracz((int32_t)(A), 24)
+#define _IQ23fracz(A)           __IQfracz((int32_t)(A), 23)
+#define _IQ22fracz(A)           __IQfracz((int32_t)(A), 22)
+#define _IQ21fracz(A)           __IQfracz((int32_t)(A), 21)
+#define _IQ20fracz(A)           __IQfracz((int32_t)(A), 20)
+#define _IQ19fracz(A)           __IQfracz((int32_t)(A), 19)
+#define _IQ18fracz(A)           __IQfracz((int32_t)(A), 18)
+#define _IQ17fracz(A)           __IQfracz((int32_t)(A), 17)
+#define _IQ16fracz(A)           __IQfracz((int32_t)(A), 16)
+#define _IQ15fracz(A)           __IQfracz((int32_t)(A), 15)
+#define _IQ14fracz(A)           __IQfracz((int32_t)(A), 14)
+#define _IQ13fracz(A)           __IQfracz((int32_t)(A), 13)
+#define _IQ12fracz(A)           __IQfracz((int32_t)(A), 12)
+#define _IQ11fracz(A)           __IQfracz((int32_t)(A), 11)
+#define _IQ10fracz(A)           __IQfracz((int32_t)(A), 10)
+#define _IQ9fracz(A)            __IQfracz((int32_t)(A), 9)
+#define _IQ8fracz(A)            __IQfracz((int32_t)(A), 8)
+#define _IQ7fracz(A)            __IQfracz((int32_t)(A), 7)
+#define _IQ6fracz(A)            __IQfracz((int32_t)(A), 6)
+#define _IQ5fracz(A)            __IQfracz((int32_t)(A), 5)
+#define _IQ4fracz(A)            __IQfracz((int32_t)(A), 4)
+#define _IQ3fracz(A)            __IQfracz((int32_t)(A), 3)
+#define _IQ2fracz(A)            __IQfracz((int32_t)(A), 2)
+#define _IQ1fracz(A)            __IQfracz((int32_t)(A), 1)
+
+#define _IQfracz(A)             __IQfracz((int32_t)(A), GLOBAL_IQ)
+
 
 //*****************************************************************************
 //
